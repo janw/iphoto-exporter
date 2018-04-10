@@ -57,6 +57,7 @@ setup(
     keywords='iphoto photos.app exporter',  # Optional
 
     py_modules=["iphoto_exporter"],
+    python_requires='>=3',
     install_requires=requirements,
     entry_points={
         'console_scripts': [
