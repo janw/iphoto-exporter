@@ -20,8 +20,8 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 setup(
     name='iphoto_exporter',
-    version='0.0.2',
-    description='Exporter script for master images from iPhoto libraries',
+    version='0.0.3',
+    description='Simple exporter for master images from iPhoto Libraries',
 
     long_description=long_description,
     long_description_content_type='text/markdown',
