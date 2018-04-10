@@ -1,5 +1,7 @@
 # iPhoto Exporter
 
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/janwh)
+
 Export master images from an iPhoto Library.
 
 I recently stumbled upon an old iPhoto library which contained a damaged database file. Fortunately each iPhoto library also contains an XML version of the library that can be parsed (at least in my case).
