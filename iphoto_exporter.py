@@ -4,7 +4,7 @@ import argparse
 import plistlib
 from os import path, makedirs
 from shutil import copyfile
-from slugify import slugify
+from slugify import slugify, slugify_filename
 from tqdm import tqdm
 
 XML_FILENAME = 'AlbumData.xml'
@@ -57,7 +57,7 @@ def export_iphoto(args):
             full_source_path = path.join(
                 args.input, 'Masters', image_path)
             full_dest_path = path.join(
-                album_directory, slugify(photo_key + '__' + image_filename))
+                album_directory, slugify_filename(photo_key + '__' + image_filename))
 
             try:
                 copyfile(full_source_path, full_dest_path)
