@@ -4,6 +4,7 @@ import argparse
 import plistlib
 from os import path, makedirs
 from shutil import copyfile
+from slugify import slugify
 from tqdm import tqdm
 
 ALBUM_FILENAME = 'AlbumData.xml'
@@ -22,7 +23,7 @@ def export_iphoto(args):
               if a['GUID'] not in IGNORED_ALBUMS]
 
     for album in tqdm(albums):
-        album_directory = path.join(OUTPUT_DIRECTORY, album['AlbumName'])
+        album_directory = path.join(OUTPUT_DIRECTORY, slugify(album['AlbumName']))
         makedirs(album_directory, exist_ok=True)
 
         for photo_key in album['KeyList']:
@@ -40,7 +41,7 @@ def export_iphoto(args):
             full_source_path = path.join(
                 INPUT_DIRECTORY, 'Masters', image_path)
             full_dest_path = path.join(
-                album_directory, photo_key + '__' + image_filename)
+                album_directory, slugify(photo_key + '__' + image_filename))
 
             try:
                 copyfile(full_source_path, full_dest_path)
