@@ -34,11 +34,14 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: System Administrators',
+        'Operating System :: MacOS :: MacOS X',
+        'Topic :: System :: Recovery Tools',
 
         # Pick your license as you wish
         'License :: OSI Approved :: MIT License',
