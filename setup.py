@@ -20,11 +20,12 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 setup(
     name='iphoto_exporter',
-    version='0.0.1',
+    version='0.0.2',
     description='Exporter script for master images from iPhoto libraries',
 
     long_description=long_description,
     long_description_content_type='text/markdown',
+    license='MIT',
 
     url='https://github.com/janwh/iphoto-exporter',
     author='Jan Willhaus',
